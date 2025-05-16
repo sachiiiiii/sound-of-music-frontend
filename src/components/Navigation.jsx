@@ -18,6 +18,10 @@ function Navigation() {
         <li>
           <Link to="/locations">Locations</Link>
         </li>
+        <li>
+          <Link to="/auth">Login/Register</Link>
+        </li>
+        {/* Add logout button later if needed */}
       </ul>
     </nav>
   );
