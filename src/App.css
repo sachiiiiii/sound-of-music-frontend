@@ -105,6 +105,8 @@ li {
   list-style: none;
 } */
 
+
+
 /* Card components styling */
 .card-grid {
   display: grid;
@@ -114,9 +116,9 @@ li {
 }
 
 .card {
-  border: 1px solid saddlebrown;
+  /* border: 1px solid saddlebrown; */
   padding: 15px;
-  border-radius: 8px;
+  border-radius: 10px;
   box-shadow: 0 -2px 4px saddlebrown;
   text-align: left;
   background-color: whitesmoke;
@@ -218,7 +220,7 @@ form button:hover {
 
 .modal form button {
   padding: 10px 15px;
-  background-color: #007bff;
+  background-color: saddlebrown;
   color: white;
   border: none;
   border-radius: 4px;
@@ -231,5 +233,5 @@ form button:hover {
 }
 
 .modal form button:hover {
-  opacity: 0.9;
+  background-color: black;
 }
