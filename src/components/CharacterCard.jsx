@@ -2,8 +2,8 @@ function CharacterCard({ character }) {
     return (
         <div className="card">
             <h3>{character.name}</h3>
-            <p>Role: {character.role}</p>
-            <p>Family: {character.family}</p>
+            <p><b>Role:</b> {character.role}</p>
+            <p><b>Family:</b> {character.family}</p>
         </div>
     );
 }
