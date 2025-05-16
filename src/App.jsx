@@ -12,7 +12,7 @@ import './App.css'
 // Simple authentication check (replace with more robust solution)
 const isAuthenticated = () => !!localStorage.getItem('authToken');
 
-// Handle conditional rendering and redirection based authentication check
+// Handle conditional rendering and redirection based on authentication check
 const ProtectedRoute = ({ children }) => {
   return isAuthenticated() ? children : <Navigate to="/auth" />;
 };
