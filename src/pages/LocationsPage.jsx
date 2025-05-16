@@ -15,7 +15,8 @@ function LocationsPage() {
                 setLocations(response.data); // Update locations state with fetched data
                 setLoading(false);
             } catch (err) {
-                setError(err.message); // Set error state if something goes wrong
+                console.error('Error fetching locations:', err);
+                setError(err.response?.data?.message || 'Failed to load locations'); // Set error state if something goes wrong
                 setLoading(false);
             }
         };

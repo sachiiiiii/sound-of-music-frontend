@@ -15,7 +15,8 @@ function CharactersPage() {
                 setCharacters(response.data); // Update characters state with fetched data
                 setLoading(false);
             } catch (err) {
-                setError(err.message); // Set error state if something goes wrong
+                console.error('Error fetching characters:', err);
+                setError(err.response?.data?.message || 'Failed to load characters'); // Set error state if something goes wrong
                 setLoading(false);
             }
         };

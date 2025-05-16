@@ -15,7 +15,8 @@ function SongsPage() {
                 setSongs(response.data); // Update songs state with fetched data
                 setLoading(false);
             } catch (err) {
-                setError(err.message); // Set error state if something goes wrong
+                console.error('Error fetching songs:', err);
+                setError(err.response?.data?.message || 'Failed to load songs'); // Set error state if something goes wrong
                 setLoading(false);
             }
         };
@@ -36,6 +37,7 @@ function SongsPage() {
         <div>
             <h2>Songs</h2>
             <div className="card-grid">
+                {/* Render a SongCard component for each song */}
                 {songs.map(song => (
                     <SongCard key={song.id} song={song} />
                 ))}
